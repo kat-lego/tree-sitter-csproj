@@ -1,0 +1,224 @@
+===================
+Test empty project
+===================
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+
+
+</Project>
+
+---
+
+(project
+  (project_open
+    (project_tag_name)
+    (non_empty_attributes
+      (attribute (attribute_name) (attribute_value))))
+  (project_close (project_tag_name)))
+
+
+==================================
+project with empty property group
+==================================
+
+< Project >
+  <PropertyGroup>
+
+
+  </PropertyGroup>
+</Project >
+
+---
+
+(project
+  (project_open (project_tag_name))
+    (property_group
+      (property_group_open (property_group_tag_name))
+      (property_group_close (property_group_tag_name)))
+  (project_close (project_tag_name)))
+
+
+==========================================
+project with properties in property group
+==========================================
+
+<Project>
+
+  <PropertyGroup>
+    <OutputType>Exe</ OutputType>
+    < Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
+
+---
+
+(project
+  (project_open (project_tag_name))
+    (property_group
+      (property_group_open (property_group_tag_name))
+      (generic_element
+        (tag_open (tag_name))
+        (text)
+        (tag_close (tag_name)))
+      (generic_element
+        (tag_open (tag_name))
+        (text)
+        (tag_close (tag_name)))
+      (property_group_close (property_group_tag_name)))
+  (project_close (project_tag_name)))
+
+
+==========================================
+project with target frame work version
+==========================================
+
+<Project>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
+
+---
+
+(project
+  (project_open (project_tag_name))
+    (property_group
+      (property_group_open (property_group_tag_name))
+      (generic_element
+        (tag_open (tag_name))
+        (text)
+        (tag_close (tag_name)))
+      (target_framework
+        (target_framework_open (target_framework_tag_name))
+        (text)
+        (target_framework_close (target_framework_tag_name)))
+      (property_group_close (property_group_tag_name)))
+  (project_close (project_tag_name)))
+
+
+==========================================
+project with target frame work version 2
+==========================================
+
+<Project>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework test="example attribute">net8.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
+
+---
+
+(project
+  (project_open (project_tag_name))
+    (property_group
+      (property_group_open (property_group_tag_name))
+      (generic_element
+        (tag_open (tag_name))
+        (text)
+        (tag_close (tag_name)))
+      (target_framework
+        (target_framework_open
+          (target_framework_tag_name)
+          (non_empty_attributes
+            (attribute (attribute_name) (attribute_value))))
+        (text)
+        (target_framework_close (target_framework_tag_name)))
+      (property_group_close (property_group_tag_name)))
+  (project_close (project_tag_name)))
+
+
+==========================================
+project with empty item group
+==========================================
+
+<Project>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
+
+---
+
+(project
+  (project_open (project_tag_name))
+    (item_group
+      (item_group_open (item_group_tag_name))
+      (item_group_close (item_group_tag_name)))
+  (project_close (project_tag_name)))
+
+
+
+==========================================
+project, item group with package references
+==========================================
+
+<Project>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Polly" Version="8.4.1" />
+  </ItemGroup>
+</Project>
+
+---
+
+(project
+  (project_open (project_tag_name))
+    (item_group
+      (item_group_open (item_group_tag_name))
+        (package_reference
+          (package_reference_openclose
+            (package_reference_tag_name)
+            (package_reference_include_attribute
+              (attribute_value))
+            (package_reference_version_attribute
+              (attribute_value))))
+        (package_reference
+          (package_reference_openclose
+            (package_reference_tag_name)
+            (package_reference_include_attribute
+              (attribute_value))
+            (package_reference_version_attribute
+              (attribute_value))))
+      (item_group_close (item_group_tag_name)))
+  (project_close (project_tag_name)))
+
+
+
+==========================================
+project, item group with project references
+==========================================
+
+<Project>
+  <ItemGroup>
+    <ProjectReference Include="some csproj file2" />
+    <ProjectReference Include="some csproj file" />
+  </ItemGroup>
+</Project>
+
+---
+
+(project
+  (project_open (project_tag_name))
+    (item_group
+      (item_group_open (item_group_tag_name))
+        (project_reference
+          (project_reference_openclose
+            (project_reference_tag_name)
+            (project_reference_include_attribute
+              (attribute_value))))
+        (project_reference
+          (project_reference_openclose
+            (project_reference_tag_name)
+            (project_reference_include_attribute
+              (attribute_value))))
+      (item_group_close (item_group_tag_name)))
+  (project_close (project_tag_name)))
+
+

@@ -1,0 +1,535 @@
+[
+  {
+    "type": "attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_name",
+          "named": true
+        },
+        {
+          "type": "attribute_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attribute_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "generic_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "tag_close",
+          "named": true
+        },
+        {
+          "type": "tag_open",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "generic_element",
+          "named": true
+        },
+        {
+          "type": "item_group_close",
+          "named": true
+        },
+        {
+          "type": "item_group_open",
+          "named": true
+        },
+        {
+          "type": "package_reference",
+          "named": true
+        },
+        {
+          "type": "project_reference",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_group_close",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "item_group_tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_group_open",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "item_group_tag_name",
+          "named": true
+        },
+        {
+          "type": "non_empty_attributes",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "non_empty_attributes",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "package_reference",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "package_reference_openclose",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "package_reference_include_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "package_reference_openclose",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "package_reference_include_attribute",
+          "named": true
+        },
+        {
+          "type": "package_reference_tag_name",
+          "named": true
+        },
+        {
+          "type": "package_reference_version_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "package_reference_version_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "project",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "item_group",
+          "named": true
+        },
+        {
+          "type": "project_close",
+          "named": true
+        },
+        {
+          "type": "project_open",
+          "named": true
+        },
+        {
+          "type": "property_group",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "project_close",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "project_tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "project_open",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "non_empty_attributes",
+          "named": true
+        },
+        {
+          "type": "project_tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "project_reference",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "project_reference_openclose",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "project_reference_include_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "project_reference_openclose",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "project_reference_include_attribute",
+          "named": true
+        },
+        {
+          "type": "project_reference_tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "property_group",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "generic_element",
+          "named": true
+        },
+        {
+          "type": "property_group_close",
+          "named": true
+        },
+        {
+          "type": "property_group_open",
+          "named": true
+        },
+        {
+          "type": "target_framework",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "property_group_close",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "property_group_tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "property_group_open",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "non_empty_attributes",
+          "named": true
+        },
+        {
+          "type": "property_group_tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tag_close",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tag_open",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "non_empty_attributes",
+          "named": true
+        },
+        {
+          "type": "tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "target_framework",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "target_framework_close",
+          "named": true
+        },
+        {
+          "type": "target_framework_open",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "target_framework_close",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "target_framework_tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "target_framework_open",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "non_empty_attributes",
+          "named": true
+        },
+        {
+          "type": "target_framework_tag_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": " ",
+    "named": false
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "/>",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "</",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "Include",
+    "named": false
+  },
+  {
+    "type": "Version",
+    "named": false
+  },
+  {
+    "type": "attribute_name",
+    "named": true
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "item_group_tag_name",
+    "named": true
+  },
+  {
+    "type": "package_reference_tag_name",
+    "named": true
+  },
+  {
+    "type": "project_reference_tag_name",
+    "named": true
+  },
+  {
+    "type": "project_tag_name",
+    "named": true
+  },
+  {
+    "type": "property_group_tag_name",
+    "named": true
+  },
+  {
+    "type": "tag_name",
+    "named": true
+  },
+  {
+    "type": "target_framework_tag_name",
+    "named": true
+  },
+  {
+    "type": "text",
+    "named": true
+  }
+]

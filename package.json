@@ -1,0 +1,59 @@
+{
+  "name": "tree-sitter-csproj",
+  "version": "0.0.0-beta",
+  "description": "tree sitter grammer for csharp project files",
+  "main": "grammar.js",
+  "types": "bindings/node",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npx tree-sitter generate && npx tree-sitter test",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kat-lego/tree-sitter-csproj.git"
+  },
+  "keywords": [
+    "tree-sitter"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "author": "katlego modupi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kat-lego/tree-sitter-csproj/issues"
+  },
+  "homepage": "https://github.com/kat-lego/tree-sitter-csproj#readme",
+  "dependencies": {
+    "node-addon-api": "^7.1.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.22.6",
+    "prebuildify": "^6.0.0"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.csproj",
+      "injection-regex": "^csproj$"
+    }
+  ]
+}
