@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-csproj",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "description": "tree sitter grammer for csharp project files",
   "main": "grammar.js",
   "types": "bindings/node",
@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/kat-lego/tree-sitter-csproj#readme",
   "dependencies": {
+    "nan": "^2.20.0",
     "node-addon-api": "^7.1.0",
     "node-gyp-build": "^4.8.0"
   },
@@ -47,8 +48,8 @@
     }
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.22.6",
-    "prebuildify": "^6.0.0"
+    "prebuildify": "^6.0.0",
+    "tree-sitter-cli": "^0.22.6"
   },
   "tree-sitter": [
     {
