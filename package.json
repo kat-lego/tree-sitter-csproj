@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-csproj",
-  "version": "0.0.2-beta",
+  "version": "0.0.4-beta",
   "description": "tree sitter grammer for csharp project files",
   "main": "grammar.js",
   "types": "bindings/node",
