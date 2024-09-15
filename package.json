@@ -11,7 +11,9 @@
   "scripts": {
     "test": "npx tree-sitter generate && npx tree-sitter test",
     "install": "node-gyp-build",
-    "prebuildify": "prebuildify --napi --strip"
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "node --test bindings/node/*_test.js"
   },
   "repository": {
     "type": "git",
