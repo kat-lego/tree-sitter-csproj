@@ -35,8 +35,7 @@
   },
   "homepage": "https://github.com/kat-lego/tree-sitter-csproj#readme",
   "dependencies": {
-    "nan": "^2.20.0",
-    "node-addon-api": "^7.1.0",
+    "node-addon-api": "^8.1.0",
     "node-gyp-build": "^4.8.0"
   },
   "peerDependencies": {
