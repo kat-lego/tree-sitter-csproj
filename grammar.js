@@ -101,7 +101,6 @@ module.exports = grammar({
       '"'
     ),
 
-
     // generic element
     generic_element: $ => seq(
       $.tag_open,
@@ -122,7 +121,6 @@ module.exports = grammar({
     tag_name: _ => /[a-zA-Z]+/,
 
     text: _ => /[^<]+/,
-
 
     comment: _ => token(seq(
       '<!--',
