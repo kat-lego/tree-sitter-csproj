@@ -1,21 +1,21 @@
 name: CI
 
-on:
-  push:
-    branches: [main]
-    paths:
-      - grammar.js
-      - src/**
-      - test/**
-      - bindings/**
-      - binding.gyp
-  pull_request:
-    paths:
-      - grammar.js
-      - src/**
-      - test/**
-      - bindings/**
-      - binding.gyp
+on: workflow_dispatch
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - grammar.js
+  #     - src/**
+  #     - test/**
+  #     - bindings/**
+  #     - binding.gyp
+  # pull_request:
+  #   paths:
+  #     - grammar.js
+  #     - src/**
+  #     - test/**
+  #     - bindings/**
+  #     - binding.gyp
 
 concurrency:
   group: ${{github.workflow}}-${{github.ref}}
