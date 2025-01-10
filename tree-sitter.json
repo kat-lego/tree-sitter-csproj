@@ -1,0 +1,33 @@
+{
+  "grammars": [
+    {
+      "name": "csproj",
+      "camelcase": "Csproj",
+      "scope": "source.csproj",
+      "path": ".",
+      "file-types": null,
+      "injection-regex": "^csproj$"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.6-beta",
+    "license": "MIT",
+    "description": "tree sitter grammer for csharp project files",
+    "authors": [
+      {
+        "name": "katlego modupi"
+      }
+    ],
+    "links": {
+      "repository": "git+https://github.com/kat-lego/tree-sitter-csproj.git"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
